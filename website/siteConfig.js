@@ -38,7 +38,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'image-alt-attribute', label: 'WebDesign'},
+    {doc: 'applied-accessibility/image-alt-attribute', label: 'WebDesign'},
     // {doc: 'doc4', label: 'Javascript'},
     // {page: 'help', label: 'Help'},
     // {blog: true, label: 'Blog'},

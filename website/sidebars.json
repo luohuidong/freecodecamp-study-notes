@@ -1,9 +1,12 @@
 {
   "WebDesign": {
     "Applied Accessibility": [
-      "image-alt-attribute",
-      "headings",
-      "semantic-elements"
+      "applied-accessibility/image-alt-attribute",
+      "applied-accessibility/headings",
+      "applied-accessibility/semantic-elements"
+    ],
+    "CSS Gird": [
+      "css-grid/grid-container"
     ]
   }
 }
