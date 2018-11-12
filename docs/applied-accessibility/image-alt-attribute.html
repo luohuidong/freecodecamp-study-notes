@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Image alt attribute · FreeCodeCamp Study Notes</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="* Alt text describes the content of the image and provices a text-alternative."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Image alt attribute · FreeCodeCamp Study Notes"/><meta property="og:type" content="website"/><meta property="og:url" content="https://luohuidong.github.io/freecodecamp-study-notes/index.html"/><meta property="og:description" content="* Alt text describes the content of the image and provices a text-alternative."/><meta property="og:image" content="https://luohuidong.github.io/freecodecamp-study-notes/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://luohuidong.github.io/freecodecamp-study-notes/img/docusaurus.png"/><link rel="shortcut icon" href="/freecodecamp-study-notes/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/freecodecamp-study-notes/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/freecodecamp-study-notes/"><img class="logo" src="/freecodecamp-study-notes/img/docusaurus.svg" alt="FreeCodeCamp Study Notes"/><h2 class="headerTitleWithLogo">FreeCodeCamp Study Notes</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/freecodecamp-study-notes/docs/applied-accessibility/image-alt-attribute" target="_self">WebDesign</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Applied Accessibility</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Applied Accessibility</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/freecodecamp-study-notes/docs/applied-accessibility/image-alt-attribute">Image alt attribute</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/applied-accessibility/headings">Headings</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/applied-accessibility/semantic-elements">Semantic Elements</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">CSS Gird</h3><ul><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/css-grid/grid-container">Grid Container</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/css-grid/grid-item">Grid Item</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Image alt attribute</h1></header><article><div><span><ul>
+<li>Alt text describes the content of the image and provices a text-alternative.</li>
+<li>Good <code>alt</code> text is short but descriptive, and meant to briefly convey the meaning of the image.</li>
+<li>For images, screen readers can access the <code>alt</code> attribute and read its contents to deliver key information.</li>
+<li>Per HTML5 specification, this is now considered mandatory.</li>
+<li><code>alt</code>  can be set to an empty string when images are grouped with a caption already describing them, or are used for decoration only.</li>
+</ul>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"visualDecoration.jpeg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
+</code></pre>
+<p><strong>参考资料：</strong></p>
+<ul>
+<li><a href="https://learn.freecodecamp.org/responsive-web-design/applied-accessibility/add-a-text-alternative-to-images-for-visually-impaired-accessibility/">Add a Text Alternative to Images for Visually Impaired Accessibility</a></li>
+<li><a href="https://learn.freecodecamp.org/responsive-web-design/applied-accessibility/jump-straight-to-the-content-using-the-main-element/">Know When Alt Text Should be Left Blank</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/freecodecamp-study-notes/docs/applied-accessibility/headings"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"></section><section class="copyright">Copyright © 2018 罗惠东</section></footer></div></body></html>
