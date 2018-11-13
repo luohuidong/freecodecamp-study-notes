@@ -21,6 +21,10 @@ Turn any HTML element into a grid container by setting its `display` property to
 </div>
 ```
 
+**Note**
+
+Turning an element into a grid only affects the behavior of its direct descendants. So by turning a direct descendant into a grid, you have a grid within a grid.
+
 ## Define the structure of the grid
 
 ### grid-template-columns
@@ -161,4 +165,3 @@ If `grid-gap` has one value, it will create a gap between all rows and columns. 
 参考资料：
 
 - [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
-

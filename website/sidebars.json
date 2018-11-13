@@ -9,7 +9,8 @@
       "css-grid/grid-container",
       "css-grid/grid-item",
       "css-grid/grid-areas",
-      "css-grid/build-in-function"
+      "css-grid/build-in-function",
+      "css-grid/layout"
     ]
   }
 }
