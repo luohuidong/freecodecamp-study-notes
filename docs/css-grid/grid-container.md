@@ -3,7 +3,7 @@ id: grid-container
 title: Grid Container
 ---
 
-本文总结的是 CSS Grid 这一部分 与 grid container 相关的 CSS 属性。
+本文总结的是 CSS Grid 这一部分与 grid container 相关的 CSS 属性。
 
 ## Grid Container
 
@@ -161,3 +161,4 @@ If `grid-gap` has one value, it will create a gap between all rows and columns. 
 参考资料：
 
 - [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
+
