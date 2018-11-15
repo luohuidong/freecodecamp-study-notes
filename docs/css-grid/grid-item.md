@@ -5,6 +5,8 @@ title: Grid Item
 
 本文总结的是 CSS Grid 这一部分 与 grid item 相关的 CSS 属性。
 
+![grid-item](../assets/grid-item.png)
+
 ## grid-column
 
 The `grid-column` property specifies a grid item's size and location in a grid layout, and is a shorthand property for `grid-column-start` and `grid-column-end`.

@@ -5,6 +5,8 @@ title: Grid Container
 
 本文总结的是 CSS Grid 这一部分与 grid container 相关的 CSS 属性。
 
+![grid-container](../assets/grid-container.png)
+
 ## Grid Container
 
 Turn any HTML element into a grid container by setting its `display` property to `grid`.

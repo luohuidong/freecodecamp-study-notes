@@ -5,6 +5,8 @@ title: build-in function
 
 本文总结的是应用于 `grid-template-columns` 和 `grid-template-rows` 这两个属性的内置函数。
 
+![build-in-function](../assets/grid-build-in-function.png)
+
 ## repeat()
 
 When you used `grid-template-columns` and `grid-template-rows` to define the structure of a grid, you entered a value for each row or column you created.
