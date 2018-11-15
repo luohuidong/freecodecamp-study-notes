@@ -5,6 +5,10 @@
       "applied-accessibility/headings",
       "applied-accessibility/semantic-elements"
     ],
+    "CSS Flexbox": [
+      "css-flexbox/flex-container",
+      "css-flexbox/flex-item"
+    ],
     "CSS Gird": [
       "css-grid/grid-container",
       "css-grid/grid-item",
