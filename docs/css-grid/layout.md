@@ -3,8 +3,6 @@ id: layout
 title: Layout
 ---
 
-![layout](../assets/grid-layout.png)
-
 ## Create Flexible Layouts
 
 ### auto-fill

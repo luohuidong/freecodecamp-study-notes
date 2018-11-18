@@ -5,7 +5,6 @@ title: Grid Areas
 
 本文总结的是 CSS Grid 这一部分与 Grid Areas 相关的属性
 
-![grid-area](../assets/grid-areas.png)
 ## grid-template-areas
 
 You can group cells of your grid together into an area and give the area a custom name. Do this by using `grid-template-areas` on the container like this:
