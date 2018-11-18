@@ -1,6 +1,7 @@
 {
   "WebDesign": {
     "Applied Accessibility": [
+      "applied-accessibility/mindmap",
       "applied-accessibility/image-alt-attribute",
       "applied-accessibility/headings",
       "applied-accessibility/semantic-elements",
@@ -8,10 +9,12 @@
       "applied-accessibility/attributes-relative-to-keyboard"
     ],
     "CSS Flexbox": [
+      "css-flexbox/mindmap",
       "css-flexbox/flex-container",
       "css-flexbox/flex-item"
     ],
     "CSS Gird": [
+      "css-grid/mindmap",
       "css-grid/grid-container",
       "css-grid/grid-item",
       "css-grid/grid-areas",

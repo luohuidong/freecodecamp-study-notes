@@ -5,8 +5,6 @@ title: Flex Container
 
 本文总结的是应用于 flex container 的 CSS 属性
 
-![flex-container](../assets/flex-container.png)
-
 ## flex container
 
 To start using the Flexbox model, you need to first define a flex container. The flex container becomes flexible by setting the display property to flex.

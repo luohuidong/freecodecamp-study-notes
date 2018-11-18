@@ -5,8 +5,6 @@ title: Flex Item
 
 本文总结的是 flex item 的 CSS 属性
 
-![flex-item](../assets/flex-item.png)
-
 ## flex-shrink
 
 When `flex-shrink` property is used, it allows an item to shrink if the flex container is too small. Items shrink when the width of the parent container is smaller than the combined widths of all the flex items within it.
