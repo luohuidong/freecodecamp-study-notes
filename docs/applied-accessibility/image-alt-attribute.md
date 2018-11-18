@@ -17,4 +17,3 @@ __参考资料：__
 
 * [Add a Text Alternative to Images for Visually Impaired Accessibility](https://learn.freecodecamp.org/responsive-web-design/applied-accessibility/add-a-text-alternative-to-images-for-visually-impaired-accessibility/)
 * [Know When Alt Text Should be Left Blank](https://learn.freecodecamp.org/responsive-web-design/applied-accessibility/jump-straight-to-the-content-using-the-main-element/)
-

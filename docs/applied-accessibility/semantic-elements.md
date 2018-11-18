@@ -79,7 +79,7 @@ title: Semantic Elements
 
 - Used together, these items wrap a visual representation (like an image, diagram, or chart) along with its caption.
 
-example: 
+example:
 
 ```html
 <figure>
@@ -94,3 +94,56 @@ example:
 参考资料：
 
 - [Improve Chart Accessibility with the figure Element](https://learn.freecodecamp.org/responsive-web-design/applied-accessibility/improve-chart-accessibility-with-the-figure-element/)
+
+## audio tag
+
+- The HTML5 `<audio>` element specifies a standard way to embed audio in a web page.
+
+```html
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+```
+
+参考资料：
+
+- [HTML5 Audio](https://www.w3schools.com/html/html5_audio.asp)
+
+## time tag
+
+- The `<time>` tag defines a human-readable date/time.
+- This element can also be used to encode dates and times in a machine-readable way so that user agents can offer to add birthday reminders or scheduled events to the user's calendar, and search engines can produce smarter search results.
+
+```html
+<p>We open at <time>10:00</time> every morning.</p>
+
+<p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
+```
+
+## form element
+
+- Improve form field accessibility with the label element
+- Wrap radio buttons in a fieldset element for better accessibility
+- Add an accessible date picker
+
+```html
+<form>
+  <fieldset>
+    <legend>Choose one of these three items:</legend>
+
+    <input id="one" type="radio" name="items" value="one">
+    <label for="one">Choice One</label><br>
+
+    <input id="two" type="radio" name="items" value="two">
+    <label for="two">Choice Two</label><br>
+
+    <input id="three" type="radio" name="items" value="three">
+    <label for="three">Choice Three</label>
+
+    <label for="input1">Enter a date:</label>
+    <input type="date" id="input1" name="input1">
+  </fieldset>
+</form>
+```

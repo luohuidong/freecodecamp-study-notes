@@ -3,7 +3,9 @@
     "Applied Accessibility": [
       "applied-accessibility/image-alt-attribute",
       "applied-accessibility/headings",
-      "applied-accessibility/semantic-elements"
+      "applied-accessibility/semantic-elements",
+      "applied-accessibility/visual-sense",
+      "applied-accessibility/attributes-relative-to-keyboard"
     ],
     "CSS Flexbox": [
       "css-flexbox/flex-container",
