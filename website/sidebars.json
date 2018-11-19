@@ -1,5 +1,14 @@
 {
   "WebDesign": {
+    "Basic HTML and HTML5": [
+      "basic-html-and-html5/mindmap"
+    ],
+    "Basic CSS": [
+      "basic-css/mindmap"
+    ],
+    "Applied Visual Design": [
+      ""
+    ],
     "Applied Accessibility": [
       "applied-accessibility/mindmap",
       "applied-accessibility/image-alt-attribute",
@@ -7,6 +16,9 @@
       "applied-accessibility/semantic-elements",
       "applied-accessibility/visual-sense",
       "applied-accessibility/attributes-relative-to-keyboard"
+    ],
+    "Responsive Web Design Principles": [
+      "responsive-web-design-principles/mindmap"
     ],
     "CSS Flexbox": [
       "css-flexbox/mindmap",
