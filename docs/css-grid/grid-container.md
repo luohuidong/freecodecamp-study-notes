@@ -152,7 +152,7 @@ If `grid-gap` has one value, it will create a gap between all rows and columns. 
 
 ### justify-items
 
-使用 `justify-self` 可以对单个 grid item 进行水平方向的对齐操作。如果想对所有的 grid container 中所有的 item 进行水平方向的操作，可以使用 `justify-items`，该属性接收的值与 `justify-self` 相同。
+使用 `justify-self` 可以对单个 grid item 中的内容进行水平方向的对齐操作。如果想对所有的 grid container 中所有 item 的内容进行水平方向的操作，可以使用 `justify-items`，该属性接收的值与 `justify-self` 相同。
 
 参考资料：
 
@@ -160,7 +160,7 @@ If `grid-gap` has one value, it will create a gap between all rows and columns. 
 
 ### align-items
 
-使用 `align-self` 可以对单个 grid item 进行垂直方向的对齐操作。如果想对所有的 grid container 中所有的 item 进行垂直方向的操作，可以使用 `align-items`，该属性接收的值与 `align-self` 相同。
+使用 `align-self` 可以对单个 grid item 内容进行垂直方向的对齐操作。如果想对所有的 grid container 中所有的 item 内容进行垂直方向的操作，可以使用 `align-items`，该属性接收的值与 `align-self` 相同。
 
 参考资料：
 
