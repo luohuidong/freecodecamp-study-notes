@@ -33,5 +33,10 @@
       "responsive-web-design/css-grid/build-in-function",
       "responsive-web-design/css-grid/layout"
     ]
+  },
+  "Javascript": {
+    "Basic Javascript": [
+      "javascript-algorithms-anddata-structures/basic-javascript/mindmap"
+    ]
   }
 }
