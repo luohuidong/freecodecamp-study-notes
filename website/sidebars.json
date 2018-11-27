@@ -37,6 +37,9 @@
   "Javascript": {
     "Basic Javascript": [
       "javascript-algorithms-anddata-structures/basic-javascript/mindmap"
+    ],
+    "ES6": [
+      "javascript-algorithms-anddata-structures/es6/mindmap"
     ]
   }
 }
