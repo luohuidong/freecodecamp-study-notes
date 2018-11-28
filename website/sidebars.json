@@ -1,16 +1,16 @@
 {
   "WebDesign": {
     "Basic HTML and HTML5": [
-      "responsive-web-design/basic-html-and-html5/mindmap"
+      "responsive-web-design/basic-html-and-html5/overview"
     ],
     "Basic CSS": [
-      "responsive-web-design/basic-css/mindmap"
+      "responsive-web-design/basic-css/overview"
     ],
     "Applied Visual Design": [
-      "responsive-web-design/applied-visual-design/mindmap"
+      "responsive-web-design/applied-visual-design/overview"
     ],
     "Applied Accessibility": [
-      "responsive-web-design/applied-accessibility/mindmap",
+      "responsive-web-design/applied-accessibility/overview",
       "responsive-web-design/applied-accessibility/image-alt-attribute",
       "responsive-web-design/applied-accessibility/headings",
       "responsive-web-design/applied-accessibility/semantic-elements",
@@ -18,15 +18,15 @@
       "responsive-web-design/applied-accessibility/attributes-relative-to-keyboard"
     ],
     "Responsive Web Design Principles": [
-      "responsive-web-design/responsive-web-design-principles/mindmap"
+      "responsive-web-design/responsive-web-design-principles/overview"
     ],
     "CSS Flexbox": [
-      "responsive-web-design/css-flexbox/mindmap",
+      "responsive-web-design/css-flexbox/overview",
       "responsive-web-design/css-flexbox/flex-container",
       "responsive-web-design/css-flexbox/flex-item"
     ],
     "CSS Gird": [
-      "responsive-web-design/css-grid/mindmap",
+      "responsive-web-design/css-grid/overview",
       "responsive-web-design/css-grid/grid-container",
       "responsive-web-design/css-grid/grid-item",
       "responsive-web-design/css-grid/grid-areas",
@@ -36,10 +36,10 @@
   },
   "Javascript": {
     "Basic Javascript": [
-      "javascript-algorithms-anddata-structures/basic-javascript/mindmap"
+      "javascript-algorithms-anddata-structures/basic-javascript/overview"
     ],
     "ES6": [
-      "javascript-algorithms-anddata-structures/es6/mindmap"
+      "javascript-algorithms-anddata-structures/es6/overview"
     ]
   }
 }

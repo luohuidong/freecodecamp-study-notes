@@ -38,8 +38,8 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'responsive-web-design/basic-html-and-html5/mindmap', label: 'WebDesign'},
-    {doc: 'javascript-algorithms-anddata-structures/basic-javascript/mindmap', label: 'Javascript'},
+    {doc: 'responsive-web-design/basic-html-and-html5/overview', label: 'WebDesign'},
+    {doc: 'javascript-algorithms-anddata-structures/basic-javascript/overview', label: 'Javascript'},
     // {page: 'help', label: 'Help'},
     // {blog: true, label: 'Blog'},
   ],
