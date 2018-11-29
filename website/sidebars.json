@@ -40,6 +40,11 @@
     ],
     "ES6": [
       "javascript-algorithms-anddata-structures/es6/overview"
+    ],
+    "Regular expression": [
+      "javascript-algorithms-anddata-structures/regular-expression/overview",
+      "javascript-algorithms-anddata-structures/regular-expression/lookahead",
+      "javascript-algorithms-anddata-structures/regular-expression/capture-group"
     ]
   }
 }
