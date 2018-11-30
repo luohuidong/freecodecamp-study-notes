@@ -45,6 +45,9 @@
       "javascript-algorithms-anddata-structures/regular-expression/overview",
       "javascript-algorithms-anddata-structures/regular-expression/lookahead",
       "javascript-algorithms-anddata-structures/regular-expression/capture-group"
+    ],
+    "Debugging": [
+      "javascript-algorithms-anddata-structures/debugging/overview"
     ]
   }
 }
