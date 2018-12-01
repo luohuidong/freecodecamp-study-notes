@@ -48,6 +48,11 @@
     ],
     "Debugging": [
       "javascript-algorithms-anddata-structures/debugging/overview"
+    ],
+    "Basic Algorithm Script": [
+      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/reverse-a-string",
+      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/factorialize-a-number",
+      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/find-the-longest-word-in-a-string"
     ]
   }
 }
