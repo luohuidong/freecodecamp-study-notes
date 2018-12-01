@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Factorialize a Number · FreeCodeCamp Study Notes</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="这个练习是一个阶乘的算法，第一眼看到的时候，首先会想到用递归，但是第一个排除不用的方法也是递归，主要的原因在于递归占资源。如果数据量比较大，那么调用栈所占的资源也就越多。"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Factorialize a Number · FreeCodeCamp Study Notes"/><meta property="og:type" content="website"/><meta property="og:url" content="https://luohuidong.github.io/freecodecamp-study-notes/index.html"/><meta property="og:description" content="这个练习是一个阶乘的算法，第一眼看到的时候，首先会想到用递归，但是第一个排除不用的方法也是递归，主要的原因在于递归占资源。如果数据量比较大，那么调用栈所占的资源也就越多。"/><meta property="og:image" content="https://luohuidong.github.io/freecodecamp-study-notes/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://luohuidong.github.io/freecodecamp-study-notes/img/docusaurus.png"/><link rel="shortcut icon" href="/freecodecamp-study-notes/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/freecodecamp-study-notes/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/freecodecamp-study-notes/"><img class="logo" src="/freecodecamp-study-notes/img/docusaurus.svg" alt="FreeCodeCamp Study Notes"/><h2 class="headerTitleWithLogo">FreeCodeCamp Study Notes</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/freecodecamp-study-notes/docs/responsive-web-design/basic-html-and-html5/overview" target="_self">WebDesign</a></li><li class="siteNavGroupActive"><a href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-javascript/overview" target="_self">Javascript</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Basic Algorithm Script</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Basic Javascript</h3><ul><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-javascript/overview">Basic JavaScript Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">ES6</h3><ul><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/es6/overview">ES6 Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Regular expression</h3><ul><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/regular-expression/overview">Regular Expression Overview</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/regular-expression/lookahead">Lookahead</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/regular-expression/capture-group">Capture Group</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Debugging</h3><ul><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/debugging/overview">Debugging</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Basic Algorithm Script</h3><ul><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/reverse-a-string">Reverse a String</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/factorialize-a-number">Factorialize a Number</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/find-the-longest-word-in-a-string">Find the Longest Word in a String</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Factorialize a Number</h1></header><article><div><span><p>这个练习是一个阶乘的算法，第一眼看到的时候，首先会想到用递归，但是第一个排除不用的方法也是递归，主要的原因在于递归占资源。如果数据量比较大，那么调用栈所占的资源也就越多。</p>
+<p>因此我首先想到的是使用 <code>for</code> 循环去完成阶乘算法。</p>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">factorialize</span>(<span class="hljs-params">num</span>) </span>{
+  <span class="hljs-keyword">let</span> factorial = <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = num; i &gt; <span class="hljs-number">0</span>; i--) {
+    factorial *= i;
+  }
+  <span class="hljs-keyword">return</span> factorial;
+}
+
+factorialize(<span class="hljs-number">5</span>);
+</code></pre>
+<p>然后我看了一下 freeCodeCamp 给出的解决方式，是利用递归去实现阶乘算法。</p>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">factorialize</span>(<span class="hljs-params">num</span>) </span>{
+  <span class="hljs-keyword">if</span> (num === <span class="hljs-number">0</span>) { <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>; }
+  <span class="hljs-keyword">return</span> num * factorialize(num<span class="hljs-number">-1</span>);
+}
+
+factorialize(<span class="hljs-number">5</span>);
+</code></pre>
+<p>既然用递归，那么就可以利用 ES6 中的尾调用优化，关于什么是尾调用优化以及对调用栈的优化是怎样的，可以参考一下 Nicholas C. Zakas <em>Understanding ECMAScript 6</em> <a href="https://leanpub.com/understandinges6/read/#leanpub-auto-tail-call-optimization">Tail Call Optimization</a> 以及阮一峰的《ECMAScript》<a href="http://es6.ruanyifeng.com/#docs/function#%E5%B0%BE%E8%B0%83%E7%94%A8%E4%BC%98%E5%8C%96">尾调用优化</a>。</p>
+<p>下面是使用尾调用优化的阶乘实现方式：</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> factorialize = <span class="hljs-function">(<span class="hljs-params">num, factorial=<span class="hljs-number">1</span></span>) =&gt;</span> {
+  <span class="hljs-keyword">if</span> (num === <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> factorial;
+  }
+  <span class="hljs-keyword">return</span> factorialize(num <span class="hljs-number">-1</span> , factorial * num);
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/reverse-a-string"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/find-the-longest-word-in-a-string"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 罗惠东</section></footer></div></body></html>

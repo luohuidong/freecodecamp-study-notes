@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Find the Longest Word in a String · FreeCodeCamp Study Notes</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="个人解题思路："/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Find the Longest Word in a String · FreeCodeCamp Study Notes"/><meta property="og:type" content="website"/><meta property="og:url" content="https://luohuidong.github.io/freecodecamp-study-notes/index.html"/><meta property="og:description" content="个人解题思路："/><meta property="og:image" content="https://luohuidong.github.io/freecodecamp-study-notes/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://luohuidong.github.io/freecodecamp-study-notes/img/docusaurus.png"/><link rel="shortcut icon" href="/freecodecamp-study-notes/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/freecodecamp-study-notes/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/freecodecamp-study-notes/"><img class="logo" src="/freecodecamp-study-notes/img/docusaurus.svg" alt="FreeCodeCamp Study Notes"/><h2 class="headerTitleWithLogo">FreeCodeCamp Study Notes</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/freecodecamp-study-notes/docs/responsive-web-design/basic-html-and-html5/overview" target="_self">WebDesign</a></li><li class="siteNavGroupActive"><a href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-javascript/overview" target="_self">Javascript</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Basic Algorithm Script</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Basic Javascript</h3><ul><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-javascript/overview">Basic JavaScript Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">ES6</h3><ul><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/es6/overview">ES6 Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Regular expression</h3><ul><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/regular-expression/overview">Regular Expression Overview</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/regular-expression/lookahead">Lookahead</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/regular-expression/capture-group">Capture Group</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Debugging</h3><ul><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/debugging/overview">Debugging</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Basic Algorithm Script</h3><ul><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/reverse-a-string">Reverse a String</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/factorialize-a-number">Factorialize a Number</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/find-the-longest-word-in-a-string">Find the Longest Word in a String</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Find the Longest Word in a String</h1></header><article><div><span><p>个人解题思路：</p>
+<ul>
+<li>将字符串转换为数组</li>
+<li>用 <code>sort()</code> 对数组进行排序</li>
+<li>输出最长字符串的长度</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">findLongestWordLength</span>(<span class="hljs-params">str</span>) </span>{
+  <span class="hljs-keyword">const</span> arr = str.split(<span class="hljs-string">' '</span>);
+  <span class="hljs-keyword">const</span> sortedArr = arr.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a.length - b.length)
+  <span class="hljs-keyword">return</span> sortedArr[sortedArr.length - <span class="hljs-number">1</span>].length;
+}
+
+findLongestWordLength(<span class="hljs-string">"The quick brown fox jumped over the lazy dog"</span>);
+</code></pre>
+<p>freeCodeCamp 给出了三种解题思路，这三种思路都是围绕了以下几点来解题：</p>
+<ul>
+<li>获取每个字符串的长度</li>
+<li>对比每个字符串的长度</li>
+<li>保存最长的字符串长度</li>
+</ul>
+<p>最为基础的思路：</p>
+<ul>
+<li>将字符串转换为数组</li>
+<li>定义一个变量 <code>maxLength</code>，保存最长的字符串长度。（保存最长的字符串长度）</li>
+<li>遍历数组，将该轮循环中的字符串长度与 <code>maxLength</code> 的大小进行比较，如果比 <code>maxLength</code> 大，则该轮循环的字符串长度赋值给 <code>maxLength</code>。（获取每个字符串长度，对比每个字符串的长度）</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">findLongestWordLength</span>(<span class="hljs-params">str</span>) </span>{
+  <span class="hljs-keyword">var</span> words = str.split(<span class="hljs-string">' '</span>);
+  <span class="hljs-keyword">var</span> maxLength = <span class="hljs-number">0</span>;
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; words.length; i++) {
+    <span class="hljs-keyword">if</span> (words[i].length &gt; maxLength) {
+      maxLength = words[i].length;
+    }
+  }
+
+  <span class="hljs-keyword">return</span> maxLength;
+}
+</code></pre>
+<p>中级解题思路：</p>
+<ul>
+<li>将字符串转换为数组</li>
+<li>利用 <code>reduce</code> 保存最长字符串长度。（保存最长字符串长度）</li>
+<li>利用 <code>Math.max()</code> 获取最长字符串长度。（获取每个字符串长度，获取最长字符串长度）</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">findLongestWordLength</span>(<span class="hljs-params">s</span>) </span>{
+  <span class="hljs-keyword">return</span> s.split(<span class="hljs-string">' '</span>).reduce(<span class="hljs-function">(<span class="hljs-params">x, y</span>) =&gt;</span> <span class="hljs-built_in">Math</span>.max(x, y.length), <span class="hljs-number">0</span>);
+}
+</code></pre>
+<p>高级解题思路（非常有意思的思路，但说实话，我个人比较喜欢中级解题思路，因为简洁易懂）：</p>
+<ul>
+<li>将字符串转换为数组。</li>
+<li>运用递归。</li>
+<li>数组最终仅保留最长长度的字符串。</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">findLongestWordLength</span>(<span class="hljs-params">str</span>) </span>{
+
+  <span class="hljs-comment">//split the string into individual words</span>
+  <span class="hljs-comment">//(important!!, you'll see why later)</span>
+  str = str.split(<span class="hljs-string">" "</span>);
+
+  <span class="hljs-comment">//str only has 1 element left that is the longest element,</span>
+  <span class="hljs-comment">//return the length of that element</span>
+  <span class="hljs-keyword">if</span>(str.length == <span class="hljs-number">1</span>){
+    <span class="hljs-keyword">return</span> str[<span class="hljs-number">0</span>].length;
+  }
+
+  <span class="hljs-comment">//if the first element's length is greater than the second element's (or equal)</span>
+  <span class="hljs-comment">//remove the second element and recursively call the function)</span>
+  <span class="hljs-keyword">if</span>(str[<span class="hljs-number">0</span>].length &gt;= str[<span class="hljs-number">1</span>].length){
+    str.splice(<span class="hljs-number">1</span>,<span class="hljs-number">1</span>);
+    <span class="hljs-keyword">return</span> findLongestWordLength(str.join(<span class="hljs-string">" "</span>));
+  }
+
+  <span class="hljs-comment">//if the second element's length is greater thant the first element's start</span>
+  <span class="hljs-comment">//call the function past the first element</span>
+  <span class="hljs-keyword">if</span>(str[<span class="hljs-number">0</span>].length &lt;= str[<span class="hljs-number">1</span>].length){
+    <span class="hljs-comment">// from the first element to the last element inclusive.</span>
+    <span class="hljs-keyword">return</span> findLongestWordLength(str.slice(<span class="hljs-number">1</span>,str.length).join(<span class="hljs-string">" "</span>));
+  }
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/factorialize-a-number"><span class="arrow-prev">← </span><span>Previous</span></a></div></div></div><nav class="onPageNav docOnPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 罗惠东</section></footer></div></body></html>
