@@ -52,7 +52,12 @@
     "Basic Algorithm Script": [
       "javascript-algorithms-anddata-structures/basic-algorithm-scripting/reverse-a-string",
       "javascript-algorithms-anddata-structures/basic-algorithm-scripting/factorialize-a-number",
-      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/find-the-longest-word-in-a-string"
+      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/find-the-longest-word-in-a-string",
+      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/return-largest-numbers-in-arrays",
+      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/repeat-a-string",
+      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/truncate-a-string",
+      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/finder-keepers",
+      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/boo-who"
     ]
   }
 }
