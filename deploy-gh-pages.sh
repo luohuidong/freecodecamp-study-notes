@@ -1,2 +1,2 @@
 cd website
-npm run publish-gh-pages
+GIT_USER=luohuidong USE_SSH=true npm run publish-gh-pages
