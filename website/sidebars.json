@@ -57,7 +57,13 @@
       "javascript-algorithms-anddata-structures/basic-algorithm-scripting/repeat-a-string",
       "javascript-algorithms-anddata-structures/basic-algorithm-scripting/truncate-a-string",
       "javascript-algorithms-anddata-structures/basic-algorithm-scripting/finder-keepers",
-      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/boo-who"
+      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/boo-who",
+      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/title-case-a-sentence",
+      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/slice-and-splice",
+      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/falsy-bouncer",
+      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/where-do-i-belong",
+      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/mutations",
+      "javascript-algorithms-anddata-structures/basic-algorithm-scripting/chunky-monkey"
     ]
   }
 }
