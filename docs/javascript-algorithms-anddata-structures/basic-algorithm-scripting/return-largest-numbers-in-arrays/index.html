@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Return Largest Numbers In Arrays · FreeCodeCamp Study Notes</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="个人解题思路："/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Return Largest Numbers In Arrays · FreeCodeCamp Study Notes"/><meta property="og:type" content="website"/><meta property="og:url" content="https://luohuidong.github.io/freecodecamp-study-notes/index.html"/><meta property="og:description" content="个人解题思路："/><meta property="og:image" content="https://luohuidong.github.io/freecodecamp-study-notes/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://luohuidong.github.io/freecodecamp-study-notes/img/docusaurus.png"/><link rel="shortcut icon" href="/freecodecamp-study-notes/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/freecodecamp-study-notes/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/freecodecamp-study-notes/"><img class="logo" src="/freecodecamp-study-notes/img/docusaurus.svg" alt="FreeCodeCamp Study Notes"/><h2 class="headerTitleWithLogo">FreeCodeCamp Study Notes</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/freecodecamp-study-notes/docs/responsive-web-design/basic-html-and-html5/overview" target="_self">WebDesign</a></li><li class="siteNavGroupActive"><a href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-javascript/overview" target="_self">Javascript</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Basic Algorithm Script</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Basic Javascript</h3><ul><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-javascript/overview">Basic JavaScript Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">ES6</h3><ul><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/es6/overview">ES6 Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Regular expression</h3><ul><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/regular-expression/overview">Regular Expression Overview</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/regular-expression/lookahead">Lookahead</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/regular-expression/capture-group">Capture Group</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Debugging</h3><ul><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/debugging/overview">Debugging</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Basic Algorithm Script</h3><ul><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/reverse-a-string">Reverse a String</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/factorialize-a-number">Factorialize a Number</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/find-the-longest-word-in-a-string">Find the Longest Word in a String</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/return-largest-numbers-in-arrays">Return Largest Numbers In Arrays</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/repeat-a-string">Repeat a String</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/truncate-a-string">Truncate a String</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/finder-keepers">Finders Keepers</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/boo-who">Boo Who</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Return Largest Numbers In Arrays</h1></header><article><div><span><p>个人解题思路：</p>
+<ul>
+<li>遍历最外层的数组</li>
+<li>获取第二层数组中的最大值</li>
+<li>保存第二层数组中的最大值</li>
+</ul>
+<p>具体到代码：</p>
+<ul>
+<li><code>map()</code> 遍历了外层的数组（利用其每轮 return 的数据将组成新的数组的特性）</li>
+<li><code>Math.max()</code> 获取了第二层数组中最大的数</li>
+<li><code>reduce()</code> 遍历了第二层数组（主要是运用它的累加器特性，即 x 保留的是上一轮循环 return 的结构）</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">largestOfFour</span>(<span class="hljs-params">arr</span>) </span>{
+  <span class="hljs-keyword">return</span> arr.map(<span class="hljs-function"><span class="hljs-params">element</span> =&gt;</span> element.reduce(<span class="hljs-function">(<span class="hljs-params">x, y</span>) =&gt;</span> <span class="hljs-built_in">Math</span>.max(x, y)))
+}
+
+largestOfFour([[<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">13</span>, <span class="hljs-number">27</span>, <span class="hljs-number">18</span>, <span class="hljs-number">26</span>], [<span class="hljs-number">32</span>, <span class="hljs-number">35</span>, <span class="hljs-number">37</span>, <span class="hljs-number">39</span>], [<span class="hljs-number">1000</span>, <span class="hljs-number">1001</span>, <span class="hljs-number">857</span>, <span class="hljs-number">1</span>]]);
+</code></pre>
+<p>还可以利用 ES6 扩展运算符，连 <code>reduce</code> 都省了，使算法更为简洁。</p>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">largestOfFour</span>(<span class="hljs-params">arr</span>) </span>{
+  <span class="hljs-keyword">return</span> arr.map(<span class="hljs-function"><span class="hljs-params">element</span> =&gt;</span> <span class="hljs-built_in">Math</span>.max(...element))
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/find-the-longest-word-in-a-string"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/repeat-a-string"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 罗惠东</section></footer></div></body></html>
