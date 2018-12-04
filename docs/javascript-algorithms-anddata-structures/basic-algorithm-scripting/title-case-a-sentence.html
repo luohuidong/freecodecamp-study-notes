@@ -48,6 +48,11 @@ titleCase(<span class="hljs-string">"I'm a little tea pot"</span>);
 </code></pre>
 <p>FreeCodeCamp 中提供了三种思路：</p>
 <p>初级思路：</p>
+<ul>
+<li>先将字符串转换为数组。</li>
+<li>将数组中的元素转换为小写，再将数组中的第一个字符转换为大写。</li>
+<li>巧妙地利用了 String 的原型。</li>
+</ul>
 <pre><code class="hljs css language-js"><span class="hljs-built_in">String</span>.prototype.replaceAt = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">index, character</span>) </span>{
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.substr(<span class="hljs-number">0</span>, index) + character + <span class="hljs-keyword">this</span>.substr(index+character.length);
 };
@@ -59,6 +64,50 @@ titleCase(<span class="hljs-string">"I'm a little tea pot"</span>);
         updatedTitle[st] = newTitle[st].toLowerCase().replaceAt(<span class="hljs-number">0</span>, newTitle[st].charAt(<span class="hljs-number">0</span>).toUpperCase());
     }
     <span class="hljs-keyword">return</span> updatedTitle.join(<span class="hljs-string">' '</span>);
+}
+</code></pre>
+<p>初级思路中提供的代码，我变换以下，让代码更好理解。</p>
+<pre><code class="hljs css language-js"><span class="hljs-built_in">String</span>.prototype.replaceFirstLetter = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> firstLetter = <span class="hljs-keyword">this</span>[<span class="hljs-number">0</span>].toUpperCase();
+  <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${firstLetter}</span><span class="hljs-subst">${<span class="hljs-keyword">this</span>.substring(<span class="hljs-number">1</span>)}</span>`</span>;
+};
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">titleCase</span>(<span class="hljs-params">str</span>) </span>{
+  <span class="hljs-keyword">const</span> titleArray = str.split(<span class="hljs-string">' '</span>);
+
+  <span class="hljs-keyword">const</span> updatedTitleArray = titleArray.map(<span class="hljs-function"><span class="hljs-params">element</span> =&gt;</span> {
+    <span class="hljs-keyword">return</span> element.toLowerCase().replaceFirstLetter();
+  })
+
+  <span class="hljs-keyword">return</span> updatedTitleArray.join(<span class="hljs-string">' '</span>);
+}
+
+<span class="hljs-keyword">const</span> result = titleCase(<span class="hljs-string">"I'm a little tea pot"</span>);
+</code></pre>
+<p>中级思路：</p>
+<ul>
+<li>将字符串转换转换为小写，随后转换为数组。</li>
+<li>利用 <code>replace()</code> 将字符串的第一个字符转换为大写，<code>replace()</code> 的作用可以查阅 <a href="https://devdocs.io/javascript/global_objects/string/replace">DevDocs replace</a></li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">titleCase</span>(<span class="hljs-params">str</span>) </span>{
+  <span class="hljs-keyword">var</span> convertToArray = str.toLowerCase().split(<span class="hljs-string">" "</span>);
+
+  <span class="hljs-keyword">var</span> result = convertToArray.map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">val</span>)</span>{
+      <span class="hljs-keyword">return</span> val.replace(val.charAt(<span class="hljs-number">0</span>), val.charAt(<span class="hljs-number">0</span>).toUpperCase());
+  });
+
+  <span class="hljs-keyword">return</span> result.join(<span class="hljs-string">" "</span>);
+}
+
+titleCase(<span class="hljs-string">"I'm a little tea pot"</span>);
+</code></pre>
+<p>高级思路：</p>
+<ul>
+<li>比较巧妙地利用了正则表达式</li>
+<li>利用 <code>replace()</code> 将字符串的第一个字符转换为大写，<code>replace()</code> 的作用可以查阅 <a href="https://devdocs.io/javascript/global_objects/string/replace">DevDocs replace</a></li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">titleCase</span>(<span class="hljs-params">str</span>) </span>{
+  <span class="hljs-keyword">return</span> str.toLowerCase().replace(<span class="hljs-regexp">/(^|\s)\S/g</span>, (L) =&gt; L.toUpperCase());
 }
 </code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/boo-who"><span class="arrow-prev">← </span><span>Boo Who</span></a><a class="docs-next button" href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-algorithm-scripting/slice-and-splice"><span>Slice and Splice</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 罗惠东</section></footer></div></body></html>
