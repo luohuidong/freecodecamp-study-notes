@@ -64,6 +64,15 @@
       "javascript-algorithms-anddata-structures/basic-algorithm-scripting/where-do-i-belong",
       "javascript-algorithms-anddata-structures/basic-algorithm-scripting/mutations",
       "javascript-algorithms-anddata-structures/basic-algorithm-scripting/chunky-monkey"
+    ],
+    "Object Oriented Programming": [
+      "javascript-algorithms-anddata-structures/object-oriented-programming/overview",
+      "javascript-algorithms-anddata-structures/object-oriented-programming/mixin",
+      "javascript-algorithms-anddata-structures/object-oriented-programming/closure",
+      "javascript-algorithms-anddata-structures/object-oriented-programming/iife"
+    ],
+    "Functional Programming": [
+      "javascript-algorithms-anddata-structures/functional-programming/overview"
     ]
   }
 }
