@@ -49,6 +49,15 @@
     "Debugging": [
       "javascript-algorithms-anddata-structures/debugging/overview"
     ],
+    "Object Oriented Programming": [
+      "javascript-algorithms-anddata-structures/object-oriented-programming/overview",
+      "javascript-algorithms-anddata-structures/object-oriented-programming/mixin",
+      "javascript-algorithms-anddata-structures/object-oriented-programming/closure",
+      "javascript-algorithms-anddata-structures/object-oriented-programming/iife"
+    ],
+    "Functional Programming": [
+      "javascript-algorithms-anddata-structures/functional-programming/overview"
+    ],
     "Basic Algorithm Script": [
       "javascript-algorithms-anddata-structures/basic-algorithm-scripting/reverse-a-string",
       "javascript-algorithms-anddata-structures/basic-algorithm-scripting/factorialize-a-number",
@@ -65,14 +74,10 @@
       "javascript-algorithms-anddata-structures/basic-algorithm-scripting/mutations",
       "javascript-algorithms-anddata-structures/basic-algorithm-scripting/chunky-monkey"
     ],
-    "Object Oriented Programming": [
-      "javascript-algorithms-anddata-structures/object-oriented-programming/overview",
-      "javascript-algorithms-anddata-structures/object-oriented-programming/mixin",
-      "javascript-algorithms-anddata-structures/object-oriented-programming/closure",
-      "javascript-algorithms-anddata-structures/object-oriented-programming/iife"
-    ],
-    "Functional Programming": [
-      "javascript-algorithms-anddata-structures/functional-programming/overview"
+    "Intermediate Algorithm Script": [
+      "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/sum-all-numbers-in-a-range",
+      "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/diff-two-arrays",
+      "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/seek-and-destroy"
     ]
   }
 }
