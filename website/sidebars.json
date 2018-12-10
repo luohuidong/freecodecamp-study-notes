@@ -77,7 +77,8 @@
     "Intermediate Algorithm Script": [
       "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/sum-all-numbers-in-a-range",
       "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/diff-two-arrays",
-      "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/seek-and-destroy"
+      "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/seek-and-destroy",
+      "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/wherefore-art-thou"
     ]
   }
 }
