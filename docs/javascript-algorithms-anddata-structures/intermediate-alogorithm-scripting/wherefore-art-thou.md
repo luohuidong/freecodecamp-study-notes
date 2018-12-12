@@ -29,7 +29,7 @@ function whatIsInAName(collection, source) {
 whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
 ```
 
-freeCodeCamp 提供的中级思路中使用了 `Object.key()` 获取第二个参数的 keys，并且利用 `every()` 来决定 `filter()` 返回值。
+freeCodeCamp 提供的中级思路中使用了 `Object.key()` 获取第二个参数的 keys，并且利用 `every()` 来决定 `filter()` 返回值。另外一个比较有意思的地方在于在 `every()` 的回调函数中。
 
 ```js
 function whatIsInAName(collection, source) {
@@ -42,5 +42,26 @@ function whatIsInAName(collection, source) {
   });
 }
 
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+```
+
+freeCodeCamp 高级思路中也提供了很有意思的解答，利用 `map` 获取对应的属性是否相同的 `boolean` 值，并通过 `reducer` 来求是否 `map` 中所有的元素都为 true。
+
+```js
+function whatIsInAName(collection, source) {
+  var srcKeys = Object.keys(source);
+
+  return collection.filter(function (obj) {
+    return srcKeys
+      .map(function(key) {
+        return obj.hasOwnProperty(key) && obj[key] === source[key];
+      })
+      .reduce(function(a, b) {
+        return a && b;
+      });
+  });
+}
+
+// test here
 whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
 ```
