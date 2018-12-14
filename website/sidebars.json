@@ -78,7 +78,16 @@
       "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/sum-all-numbers-in-a-range",
       "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/diff-two-arrays",
       "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/seek-and-destroy",
-      "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/wherefore-art-thou"
+      "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/wherefore-art-thou",
+      "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/spinal-tap-case",
+      "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/search-and-replace",
+      "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/dna-pairing",
+      "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/missing-letters",
+      "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/sorted-union",
+      "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/convert-html-entities",
+      "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/sum-all-odd-fibonacci-numbers",
+      "javascript-algorithms-anddata-structures/intermediate-alogorithm-scripting/smallest-common-multiple"
+
     ]
   }
 }

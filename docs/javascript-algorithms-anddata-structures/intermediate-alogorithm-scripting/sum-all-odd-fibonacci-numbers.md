@@ -1,6 +1,6 @@
 ---
 id: sum-all-odd-fibonacci-numbers
-Title: Sum All Odd Fibonacci Numbers
+title: Sum All Odd Fibonacci Numbers
 ---
 
 ```js
