@@ -21,7 +21,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'FreeCodeCamp Study Notes', // Title for your website.
+  title: 'Study Notes', // Title for your website.
   tagline: '',
   // url: 'https://your-docusaurus-test-site.com', // Your website URL
   // baseUrl: '/', // Base URL for your project */
@@ -38,6 +38,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
+    {doc: 'source/javascript', label: 'Source'},
     {doc: 'responsive-web-design/basic-html-and-html5/overview', label: 'WebDesign'},
     {doc: 'javascript-algorithms-anddata-structures/basic-javascript/overview', label: 'Javascript'},
     // {page: 'help', label: 'Help'},
