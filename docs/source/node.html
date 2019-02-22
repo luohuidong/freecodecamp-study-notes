@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Node · Study Notes</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.tutorialspoint.com/oauth2.0/&quot;&gt;OAuth 2.0 Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Node · Study Notes"/><meta property="og:type" content="website"/><meta property="og:url" content="https://luohuidong.github.io/freecodecamp-study-notes/index.html"/><meta property="og:description" content="&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.tutorialspoint.com/oauth2.0/&quot;&gt;OAuth 2.0 Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+"/><meta property="og:image" content="https://luohuidong.github.io/freecodecamp-study-notes/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://luohuidong.github.io/freecodecamp-study-notes/img/docusaurus.png"/><link rel="shortcut icon" href="/freecodecamp-study-notes/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/freecodecamp-study-notes/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/freecodecamp-study-notes/"><img class="logo" src="/freecodecamp-study-notes/img/docusaurus.svg" alt="Study Notes"/><h2 class="headerTitleWithLogo">Study Notes</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/freecodecamp-study-notes/docs/source/javascript" target="_self">Source</a></li><li class=""><a href="/freecodecamp-study-notes/docs/responsive-web-design/basic-html-and-html5/overview" target="_self">WebDesign</a></li><li class=""><a href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-javascript/overview" target="_self">Javascript</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Frontend</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Frontend</h3><ul><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/source/javascript">JavaScript</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/source/html-css">HTML-CSS</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/source/web-develop">Web Develop</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/freecodecamp-study-notes/docs/source/node">Node</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/source/others">其他</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Node</h1></header><article><div><span><ul>
+<li><a href="https://www.tutorialspoint.com/oauth2.0/">OAuth 2.0 Tutorial</a></li>
+<li>restful api
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/%E8%A1%A8%E7%8E%B0%E5%B1%82%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2">表现层状态转换</a></li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="node-资源"></a><a href="#node-资源" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>node 资源</h2>
+<ul>
+<li><a href="https://github.com/i0natan/nodebestpractices?utm_source=gold_browser_extension">Node.js Best Practices</a></li>
+<li><a href="https://github.com/sindresorhus/awesome-nodejs">awesome-nodejs</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="框架"></a><a href="#框架" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>框架</h2>
+<ul>
+<li><a href="http://expressjs.com/">Express</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="数据库"></a><a href="#数据库" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>数据库</h2>
+<ul>
+<li><a href="https://www.mongodb.com/">MongoDB</a>
+<ul>
+<li><a href="https://github.com/Automattic/mongoose">Mongoose</a>: Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment.</li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="工具"></a><a href="#工具" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>工具</h2>
+<ul>
+<li><a href="https://github.com/creationix/nvm">nvm</a></li>
+<li><a href="https://github.com/remy/nodemon">nodemon</a></li>
+<li><a href="https://github.com/chimurai/http-proxy-middleware">http-proxy-middleware</a></li>
+<li><a href="https://github.com/GoogleChrome/puppeteer">Puppeteer</a></li>
+<li><a href="https://github.com/expressjs/body-parser">body-prase</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="服务器"></a><a href="#服务器" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>服务器</h2>
+<ul>
+<li><a href="https://nginx.org/">Nginx</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/freecodecamp-study-notes/docs/source/web-develop"><span class="arrow-prev">← </span><span>Web Develop</span></a><a class="docs-next button" href="/freecodecamp-study-notes/docs/source/others"><span>其他</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#node-资源">node 资源</a></li><li><a href="#框架">框架</a></li><li><a href="#数据库">数据库</a></li><li><a href="#工具">工具</a></li><li><a href="#服务器">服务器</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 罗惠东</section></footer></div></body></html>

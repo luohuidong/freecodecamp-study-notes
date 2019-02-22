@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>JavaScript · Study Notes</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://stateofjs.com/&quot;&gt;The state of javascript&lt;/a&gt;：JavaScript 年度报告&lt;/li&gt;
+&lt;/ul&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="JavaScript · Study Notes"/><meta property="og:type" content="website"/><meta property="og:url" content="https://luohuidong.github.io/freecodecamp-study-notes/index.html"/><meta property="og:description" content="&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://stateofjs.com/&quot;&gt;The state of javascript&lt;/a&gt;：JavaScript 年度报告&lt;/li&gt;
+&lt;/ul&gt;
+"/><meta property="og:image" content="https://luohuidong.github.io/freecodecamp-study-notes/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://luohuidong.github.io/freecodecamp-study-notes/img/docusaurus.png"/><link rel="shortcut icon" href="/freecodecamp-study-notes/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/freecodecamp-study-notes/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/freecodecamp-study-notes/"><img class="logo" src="/freecodecamp-study-notes/img/docusaurus.svg" alt="Study Notes"/><h2 class="headerTitleWithLogo">Study Notes</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/freecodecamp-study-notes/docs/source/javascript" target="_self">Source</a></li><li class=""><a href="/freecodecamp-study-notes/docs/responsive-web-design/basic-html-and-html5/overview" target="_self">WebDesign</a></li><li class=""><a href="/freecodecamp-study-notes/docs/javascript-algorithms-anddata-structures/basic-javascript/overview" target="_self">Javascript</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Frontend</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Frontend</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/freecodecamp-study-notes/docs/source/javascript">JavaScript</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/source/html-css">HTML-CSS</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/source/web-develop">Web Develop</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/source/node">Node</a></li><li class="navListItem"><a class="navItem" href="/freecodecamp-study-notes/docs/source/others">其他</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">JavaScript</h1></header><article><div><span><ul>
+<li><a href="https://stateofjs.com/">The state of javascript</a>：JavaScript 年度报告</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="javascript"></a><a href="#javascript" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JavaScript</h2>
+<ul>
+<li><a href="https://github.com/es5/es5.github.io">Annotated ECMAScript 5</a>：ES5 规范解析</li>
+<li><a href="https://javascript.info/">The Modern Javascript Tutorial</a></li>
+<li><a href="https://github.com/leonardomso/33-js-concepts">33 Concepts Every JavaScript Developer Should Know</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="网络请求"></a><a href="#网络请求" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>网络请求</h2>
+<ul>
+<li><a href="https://qianduan.group/posts/5bebe26f9fd64d5a7458a932">关于前端请求的那些事</a></li>
+<li><a href="https://stackoverflow.com/questions/25727306/request-header-field-access-control-allow-headers-is-not-allowed-by-access-contr">跨域问题</a></li>
+<li><a href="https://github.com/whatwg/fetch">fetch 标准</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="typescript"></a><a href="#typescript" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TypeScript</h2>
+<ul>
+<li><a href="https://github.com/DefinitelyTyped/DefinitelyTyped">DefinitelyTyped</a>：The repository for high quality TypeScript type definitions</li>
+<li><a href="https://github.com/Microsoft/TypeScript-React-Starter#typescript-react-starter">TypeScript-React-Starter</a></li>
+<li><a href="https://microsoft.github.io/TypeSearch/">TypeSearch</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="react"></a><a href="#react" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>React</h2>
+<ul>
+<li><a href="https://github.com/enaqx/awesome-react">Awesome React</a></li>
+<li><a href="https://medium.freecodecamp.org/the-react-handbook-b71c27b0a795">The React Handbook</a></li>
+<li><a href="https://redux.js.org/introduction/getting-started">redux</a>
+<ul>
+<li><a href="https://react-redux.js.org/">react-redux</a></li>
+<li><a href="https://github.com/reduxjs/redux-thunk">redux-trunk</a>：异步 actions 解决方案</li>
+<li><a href="https://github.com/redux-utilities/redux-actions">redux-action</a></li>
+<li><a href="https://github.com/redux-utilities/flux-standard-action">flux-standard-action</a>：actions 结构标准</li>
+<li><a href="https://github.com/gaearon/react-hot-loader">react-hot-loader</a>：Webpack React 热加载</li>
+</ul></li>
+<li><a href="https://facebook.github.io/jsx/">JSX 规范</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="mobile"></a><a href="#mobile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mobile</h2>
+<ul>
+<li><a href="https://www.nativescript.org/">Native Script</a></li>
+<li><a href="https://facebook.github.io/react-native/">React Native</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="数据"></a><a href="#数据" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>数据</h2>
+<ul>
+<li><a href="https://github.com/d3/d3">D3</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="ui"></a><a href="#ui" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>UI</h2>
+<ul>
+<li><a href="https://material-ui.com/">MATERIAL-UI</a></li>
+<li><a href="https://ant.design/index-cn">Ant Design</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="tool"></a><a href="#tool" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>tool</h2>
+<ul>
+<li><a href="https://github.com/jsdoc3/jsdoc">JSDoc</a>：自动 JS 生成文档</li>
+<li><a href="https://gulpjs.com/">Gulp</a></li>
+<li><a href="https://code.visualstudio.com/docs/languages/jsconfig">vscode-jsconfig.json</a>：vscode js 语言服务配置</li>
+<li><a href="https://emmet.io/">Emment</a></li>
+<li><a href="https://jsonplaceholder.typicode.com/">JSONPlaceholder</a>：Fake Online REST API for Testing and Prototyping Serving.</li>
+<li><a href="https://github.com/typicode/json-server">JSON Server</a></li>
+<li><a href="https://my-json-server.typicode.com/">My JSON Server</a></li>
+<li><a href="https://eslint.org/">ESLint</a></li>
+<li><a href="https://github.com/paularmstrong/normalizr">normalizr</a>：对嵌套的 JSON 规范化</li>
+<li><a href="https://sentry.io/welcome/">sentry</a>：error report</li>
+<li><a href="https://jestjs.io">Jest</a>：JavaScript 测试工具</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/freecodecamp-study-notes/docs/source/html-css"><span>HTML-CSS</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#javascript">JavaScript</a></li><li><a href="#网络请求">网络请求</a></li><li><a href="#typescript">TypeScript</a></li><li><a href="#react">React</a></li><li><a href="#mobile">Mobile</a></li><li><a href="#数据">数据</a></li><li><a href="#ui">UI</a></li><li><a href="#tool">tool</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 罗惠东</section></footer></div></body></html>
