@@ -1,6 +1,7 @@
 {
   "Source": {
     "Frontend": [
+      "source/frontend",
       "source/javascript",
       "source/html-css",
       "source/web-develop",

@@ -10,6 +10,7 @@ title: JavaScript
 - [Annotated ECMAScript 5](https://github.com/es5/es5.github.io)：ES5 规范解析
 - [The Modern Javascript Tutorial](https://javascript.info/)
 - [33 Concepts Every JavaScript Developer Should Know](https://github.com/leonardomso/33-js-concepts)
+- [You Don't Know JS (book series)](https://github.com/getify/You-Dont-Know-JS)
 
 ## 网络请求
 

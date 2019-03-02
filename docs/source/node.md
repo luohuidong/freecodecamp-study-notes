@@ -28,6 +28,7 @@ title: Node
 - [http-proxy-middleware](https://github.com/chimurai/http-proxy-middleware)
 - [Puppeteer](https://github.com/GoogleChrome/puppeteer)
 - [body-prase](https://github.com/expressjs/body-parser)
+- [cheerio](https://github.com/cheeriojs/cheerio)：在服务器端解析 HTML，类似于 jQuery 的语法。
 
 ## 服务器
 
